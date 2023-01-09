@@ -1,0 +1,93 @@
+@import "colors";
+
+.sponsors {
+    color: black;
+    background: white;
+    margin-top: 40vh;
+    padding: 3rem 0;
+
+    hr {
+        width: 20%;
+        margin: 3rem auto;
+    }
+
+    >div {
+        margin: 0 auto;
+
+        @include media-desktop {
+            width: 80%;
+        }
+
+        // Backgrounds defined below
+        text-align: center;
+
+        h1 {
+            font-family: monospace;
+            font-size: 1.3rem;
+
+            @include media-desktop {
+                font-size: 2rem;
+            }
+        }
+
+        .items {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+
+            margin-top: 2rem;
+            grid-column-gap: 4rem;
+            grid-row-gap: 3rem;
+
+            // 1 column on mobile, Other grids defined below
+            grid-template-columns: 70%;
+
+            // Fix so images pay attention to grid
+            a img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// Desktop grid definitions
+@include media-desktop {
+    .platinum .items {
+        grid-template-columns: 30% 30% !important;
+        grid-column-gap: 3rem;
+    }
+
+    .gold .items {
+        grid-template-columns: 25% 25% !important;
+        grid-column-gap: 3rem;
+    }
+
+    .silver .items {
+        grid-template-columns: 20% 20% !important;
+    }
+
+    .bronze .items {
+        grid-template-columns: 20% !important;
+    }
+
+    .partner .items {
+        grid-template-columns: 20% 20% 20% 20% !important;
+    }
+}
+
+// Fixes for specific logos
+.silver__gresearch {
+    width: 40% !important;
+    margin: 0 auto;
+}
+
+.hackuk img {
+    margin-bottom: -15px;
+}
+
+.mns img {
+    height: 8rem;
+    width: auto !important;
+}
+

@@ -1,0 +1,95 @@
+@import "media";
+@import "colors";
+
+canvas#indexScene {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+
+    z-index: -1;
+
+    @media (prefers-reduced-motion) {
+        opacity: 0;
+    }
+}
+
+.jumbotron {
+    .jumbotron__content {
+        margin: 0 auto;
+        width: 100%;
+
+        @include media-desktop {
+            width: 30%;
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+
+        >.jumbotron__logo {
+            width: 80%;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        >.jumbotron__square {
+            background: $background;
+            font-family: monospace;
+
+            >.jumbotron__subtitle {
+                text-align: center;
+                margin: 1rem;
+                margin-bottom: 1.5rem;
+
+                font-size: 1.1rem;
+
+                @include media-desktop {
+                    font-size: 1.5rem;
+                }
+
+            }
+
+            >.jumbotron__buttons,
+            .jumbotron__socials {
+                display: flex;
+
+                >a {
+                    flex-basis: 50%;
+
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+
+                    background: $primary-darker;
+                    color: $text;
+
+                    padding: 0.7rem;
+
+                    font-size: 1.4rem;
+                    font-family: 'Oswald', sans-serif;
+                    font-weight: bolder;
+                    text-transform: uppercase;
+
+                    border-top: 1px solid black;
+                    border-right: 1px solid black;
+
+                    >a:last-child {
+                        border: 0 !important;
+                    }
+
+                    transition: background-color linear 0.1s;
+
+                    &:hover {
+                        background: darken($primary-darker, 25);
+                    }
+                }
+
+            }
+        }
+    }
+}

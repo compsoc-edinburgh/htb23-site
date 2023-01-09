@@ -1,0 +1,33 @@
+<nav class="navbar {% if include.fixed %}navbar-fixed {% endif %}">
+    <a href="/" class="logo" id="navbar-logo"><img src="static/logos/index_nav.png" alt="Logo"></a>
+    <ul class="items-left">
+        <li><a href="#jumbotron">About</a></li>
+        <li><a href="#jump-past-projects">Past Projects</a></li>
+        <li><a href="#jump-location">Travel & Reimbursements</a></li>
+        <li><a href="#jump-sponsors">Sponsors</a></li>
+        <li><a target="_blank" href="{{ site.links.facebook }}"><i class="fab fa-facebook"></i></a></li>
+        <li><a target="_blank" href="{{ site.links.youtube }}"><i class="fab fa-youtube"></i></a></li>
+        <li><a target="_blank" href="{{ site.links.twitter }}"><i class="fab fa-twitter"></i></a></li>
+        <li><a target="_blank" href="{{ site.links.instagram }}"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+    <div class="expand">
+        <button onClick="toggleActive('#navbarPopout')">
+            <i class="fas fa-bars" aria-label="Expand"></i>
+        </button>
+    </div>
+    
+</nav>
+
+<nav id="navbarPopout" aria-role="dialog">
+    <ul class="items">
+        <li aria-role="button" onClick="toggleActive('#navbarPopout')"><a>Close</a></li>
+        <li><a href="#jumbotron">About</a></li>
+        <li><a href="#jump-past-projects">Past Projects</a></li>
+        <li><a href="#jump-location">Location</a></li>
+        <li><a href="#jump-travel-reimbursements">Travel reimbursements</a></li>
+        <li><a target="_blank" href="{{ site.links.facebook }}">Facebook</a></li>
+        <li><a target="_blank" href="{{ site.links.youtube }}">Youtube</a></li>
+        <li><a target="_blank" href="{{ site.links.twitter }}">Twitter</a></li>
+        <li><a target="_blank" href="{{ site.links.instagram }}">Instagram</a></li>
+    </ul>
+</nav>

@@ -1,0 +1,65 @@
+@import 'media';
+@import 'colors';
+
+$faq__cards-per-row: 3;
+
+.faq {
+    background-color: $content__background;
+    color: $content__text;
+
+    .explanation {
+        text-align: center;
+        margin: 0;
+        padding: 0 10%;
+        padding-top: 3rem;
+
+        @include media-desktop {
+            padding-bottom: 5rem;
+        }
+
+    }
+}
+
+
+.faq__layout {
+    padding: 5rem 0;
+    display: grid;
+    grid-template-columns: 90%;
+    justify-content: center;
+    grid-column-gap: 2rem;
+    grid-row-gap: 5rem;
+
+    @include media-desktop {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 2rem 10% 0 10%;
+        grid-row-gap: 4rem;
+    }
+}
+
+.faq__card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    text-align: center;
+
+    @include media-mobile {
+        max-width: 50ch;
+    }
+
+    >.faq__cardinfo,
+    >.faq__cardsubtitle {
+        text-align: left;
+    }
+
+    >.faq__cardtitle {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    >.faq__cardicon {
+        font-size: 5em;
+    }
+
+}

@@ -1,0 +1,43 @@
+---
+---
+<!DOCTYPE html>
+
+<html>
+    {% include head.html %}
+
+    <body>
+        {% include navbar.html fixed=true %}
+        {% include jumbotron.html %}
+
+        {% include components/slice_top.html %}
+        {% include numbers.html %}
+        {% include components/slice_bottom.html %}
+
+        {% include components/slice_top.html %}
+        {% include faq.html %}
+        {% include components/slice_bottom.html %}
+
+        {% include projects.html %}
+
+        {% comment %}
+        {% include components/slice_top.html %}
+        {% include events.html %}
+        {% include components/slice_bottom.html %}
+        {% endcomment %}
+
+        <div id="jump-location"></div>
+        {% include location.html %}
+
+        {% include sponsors.html %}
+
+        {% include footer.html %}
+        {% include scripts.html %}
+        {% if jekyll.environment == "production" %}
+        <script src="lib/index.min.js" defer></script>
+        {% else %}
+        <script src="lib/index.mjs" defer type="module"></script>
+        {% endif %}
+
+        {% include mlh.html %}
+    </body>
+</html>

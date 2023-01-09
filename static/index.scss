@@ -1,0 +1,25 @@
+---
+---
+body {
+    margin: 0;
+
+    background-color: black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@import "jumbotron";
+@import "typography";
+@import "slice";
+@import "banner";
+@import "faq";
+@import "sponsors";
+@import "mlh";
+@import "footer";
+@import "nav";
+@import "location";
+@import "numbers";
+@import "projects";
+@import "events";
