@@ -1,6 +1,6 @@
-# HTB-2022
+# HTB-2023
 
-This is the website for HTB 2022.
+This is the website for HTB 2023.
 
 ## How to test
 
@@ -13,7 +13,7 @@ docker run --volume=$(pwd):/src:Z --publish 4000:4000 grahamc/jekyll serve --wat
 If you don't have Docker, [install jekyll](https://jekyllrb.com/docs/installation/) and run this:
 
 ```
-$ git clone https://github.com/compsoc-edinburgh/htb21-site
-$ cd htb21-site
+$ git clone https://github.com/compsoc-edinburgh/htb23-site
+$ cd htb23-site
 $ jekyll serve
 ```
