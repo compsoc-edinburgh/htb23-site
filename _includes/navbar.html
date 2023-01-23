@@ -1,14 +1,15 @@
+<div style="color: rgba(0,0,0,0.2);"><div id = "htbspiral" style="position: fixed;z-index: -1;"></div></div>
 <nav class="navbar {% if include.fixed %}navbar-fixed {% endif %}">
-    <a href="/" class="logo" id="navbar-logo"><img src="static/logos/index_nav.png" alt="Logo"></a>
-    <ul class="items-left">
+    <a href="/" class="logon" id="navbar-logo"><img src="static/logos/htblogo.png" alt="Logo" style="width: 50px;height: 50px;justify-content: center;"></a>
+    <ul class="items">
         <li><a href="#jumbotron">About</a></li>
         <li><a href="#jump-past-projects">Past Projects</a></li>
         <li><a href="#jump-location">Travel & Reimbursements</a></li>
         <li><a href="#jump-sponsors">Sponsors</a></li>
-        <li><a target="_blank" href="{{ site.links.facebook }}"><i class="fab fa-facebook"></i></a></li>
-        <li><a target="_blank" href="{{ site.links.youtube }}"><i class="fab fa-youtube"></i></a></li>
-        <li><a target="_blank" href="{{ site.links.twitter }}"><i class="fab fa-twitter"></i></a></li>
-        <li><a target="_blank" href="{{ site.links.instagram }}"><i class="fab fa-instagram"></i></a></li>
+        <li id="social"><a target="_blank" href="{{ site.links.facebook }}"><i class="fab fa-facebook"></i></a></li>
+        <li id="social"><a target="_blank" href="{{ site.links.youtube }}"><i class="fab fa-youtube"></i></a></li>
+        <li id="social"><a target="_blank" href="{{ site.links.twitter }}"><i class="fab fa-twitter"></i></a></li>
+        <li id="social"><a target="_blank" href="{{ site.links.instagram }}"><i class="fab fa-instagram"></i></a></li>
     </ul>
     <div class="expand">
         <button onClick="toggleActive('#navbarPopout')">
@@ -20,7 +21,7 @@
 
 <nav id="navbarPopout" aria-role="dialog">
     <ul class="items">
-        <li aria-role="button" onClick="toggleActive('#navbarPopout')"><a>Close</a></li>
+        <li aria-role="button" onClick="toggleActive('#navbarPopout')"><a style="opacity: 0;">Close</a></li>
         <li><a href="#jumbotron">About</a></li>
         <li><a href="#jump-past-projects">Past Projects</a></li>
         <li><a href="#jump-location">Location</a></li>

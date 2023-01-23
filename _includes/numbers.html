@@ -1,14 +1,55 @@
 <div class="numbers">
+    <script>
+        
+
+
+const easeOutQuad = t => t * ( 2 - t );
+var c = 1;
+const animateCountUp = el => {
+  let frame = 0;
+  const countTo = parseInt(el.attributes['data-countup-target'].value, 10);
+  var animationDuration = parseInt(el.attributes['duration'].value);
+  const frameDuration = 8;
+  const totalFrames = Math.round( animationDuration / frameDuration );
+  const counter = setInterval( () => {
+    frame++;
+    const progress = easeOutQuad( frame / totalFrames );
+    const currentCount = Math.round( countTo * progress );
+    if ( parseInt( el.innerHTML, 10 ) !== currentCount ) {
+        if(el.attributes['p'].value == "True"){
+      el.innerHTML = currentCount + "+";
+        }
+        else{
+            el.innerHTML = currentCount;
+        }
+    }
+
+    if ( frame === totalFrames ) {
+      clearInterval( counter );
+    }
+  }, frameDuration );
+};
+const runAnimations = () => {
+	const countupEls = document.querySelectorAll( '.countup' );
+	countupEls.forEach( animateCountUp );
+  };
+  document.addEventListener("scroll",function(){
+    if(window.scrollY>400 && c==1){
+        runAnimations();
+        c+=1;
+    }
+  });
+    </script>
     <div class="number-container">
-        <span class="number countUp" data-countup-target="8">0</span>
+        <span class="number countup" data-countup-target="9" duration="500" p="False">0</span>
         <span class="number-caption">years</span>
     </div>
     <div class="number-container">
-        <span class="number countUp" data-countup-target="200" data-countup-suffix="+">0+</span>
+        <span class="number countup" data-countup-target="200" data-countup-suffix="+" duration="1000" p="True">0</span>
         <span class="number-caption">students</span>
     </div>
     <div class="number-container">
-        <span class="number countUp" data-countup-target="50" data-countup-suffix="+">0+</span>
+        <span class="number countup" data-countup-target="50" data-countup-suffix="+" duration="750" p="True">0</span>
         <span class="number-caption">teams</span>
     </div>
 </div>

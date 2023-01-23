@@ -2,6 +2,9 @@
 
 .navbar {
     display: flex;
+    align-items: center;
+    font-family: monospace;
+    font-size: 0.8rem;
 
     &.withBg {
         background: $background;
@@ -13,7 +16,7 @@
     width: 100%;
     box-sizing: border-box;
 
-    padding: 1rem 1rem;
+    padding: 0.5rem 1rem;
 
     .logo {
         height: 100%;
@@ -26,17 +29,18 @@
         }
     }
 
-    .items-left {
+    .items {
+        
+
         list-style-type: none;
 
         height: 100%;
-        padding: 0;
+        padding: 1rem;
         margin: 0;
 
         li {
             display: inline-block;
             height: 100%;
-
             a {
                 box-sizing: border-box;
                 padding: 0 2rem;
@@ -47,9 +51,10 @@
 
                 color: $text;
             }
+
         }
     }
-
+    
     .expand {
         /* Hack to display at end */
         flex-grow: 2;
@@ -110,6 +115,10 @@
 #navbarPopout.active {
     top: 0 !important;
     transition: top 0.2s ease-out;
+    z-index: 1000;
+    font-family: monospace;
+    font-size: 1rem;
+
     /* Used for coming in */
 }
 
@@ -119,10 +128,14 @@
         display: none;
     }
 }
-
+@media screen and (max-width:68rem) {
+    #social{
+        display: none;
+    }
+}
 
 @include media-mobile {
-    .navbar .items-left {
+    .navbar .items {
         display: none;
     }
 }
