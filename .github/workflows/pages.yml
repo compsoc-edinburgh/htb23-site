@@ -36,7 +36,7 @@ jobs:
           sudo chmod -R 755 build/
           npm run rollupProduction
       - name: Add CNAME file
-        run: echo "2022.hacktheburgh.com" > build/CNAME
+        run: echo "2023.hacktheburgh.com" > build/CNAME
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
