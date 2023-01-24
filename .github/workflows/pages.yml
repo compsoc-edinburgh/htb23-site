@@ -32,8 +32,8 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build Minified JS
         run: |
-          sudo chown -R $USER build/lib/
-          sudo chmod -R 755 build/lib/
+          sudo chown -R $USER ./ 
+          sudo chmod -R 755 ./
           npm run rollupProduction
       - name: Add CNAME file
         run: echo "2023.hacktheburgh.com" > build/CNAME
