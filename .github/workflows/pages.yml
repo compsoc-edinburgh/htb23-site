@@ -30,9 +30,9 @@ jobs:
         with:
           build_only: true
           token: ${{ secrets.GITHUB_TOKEN }}
-      
+     
       - name: Add CNAME file
-        run: echo "2023.hacktheburgh.com" > build/CNAME
+        run: echo "2023.hacktheburgh.com" > CNAME
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
