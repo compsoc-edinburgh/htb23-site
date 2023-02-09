@@ -54,13 +54,13 @@
 // Desktop grid definitions
 @include media-desktop {
     .platinum .items {
-        grid-template-columns: 30% 30% !important;
-        grid-column-gap: 3rem;
+        grid-template-columns: 20% !important;
+        
     }
 
     .gold .items {
-        grid-template-columns: 25% 25% !important;
-        grid-column-gap: 3rem;
+        grid-template-columns: 20% !important;
+        
     }
 
     .silver .items {
@@ -68,7 +68,8 @@
     }
 
     .bronze .items {
-        grid-template-columns: 20% !important;
+        grid-template-columns: 30% 30% !important;
+        grid-column-gap: 3rem;
     }
 
     .partner .items {
