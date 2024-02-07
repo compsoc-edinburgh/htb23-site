@@ -15,6 +15,44 @@ canvas#indexScene {
         opacity: 0;
     }
 }
+
+.redir{
+    position: fixed;
+    width: 50%;
+    height: max-content;
+    max-width: 800px;
+    border-radius: 10px;
+    border: 2px solid #A6D0DD;
+    background-color: #FFF9DE;
+    opacity: 0.95;
+    color: #144d5e;
+    z-index: 20;
+    text-align: center;
+    vertical-align: middle;
+    padding: 60px;
+    font-size: calc(20px + 0.5vw);
+    font-family: 'Oswald', sans-serif;
+    font-weight: bolder;
+    overflow: scroll;
+}
+.retrostyle{
+    opacity: 1;
+    margin-top: 50px;
+    border-radius: 10px;
+    border: 2px solid #A6D0DD;
+    background-color: #A6D0DD;
+    padding: 10px;
+    width: 30%;
+    min-width: max-content;
+    font-family: 'Oswald', sans-serif;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    font-size: calc(20px + 0.5vw);
+}
+.retrostyle:hover{
+    background-color: transparent;
+}
 .fade-in {
     animation: fadeIn ease 2s;
     -webkit-animation: fadeIn ease 2s;
